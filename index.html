@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header-grid">
+    <div class="container">
+      <div class="menu-bar">
+        <!-- 👇 Wrap both hamburger + title together -->
+        <div class="menu-left">
+          <button class="hamburger" id="hamburger">&#9776;</button>
+          <h1>MY PORTFOLIO</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="nav-menu">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">CONTACT US</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-grid">
+    <div class="profile-image">
+      <img src="amparado.jpg" alt="Luzangel A. Amparado">
+    </div>
+    <div class="text-box">
+      <p>Hello It’s me</p>
+      <h2>Luzangel A. Amparado</h2>
+      <p>And I am Information Technology</p>
+    </div>
+  </main>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
