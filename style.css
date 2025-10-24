@@ -24,7 +24,6 @@ body {
   width: 100%;
 }
 
-/* ==== MENU BAR ==== */
 .menu-bar {
   background-color: #5a4f4f;
   border-radius: 20px;
@@ -39,7 +38,6 @@ body {
   margin: 10px auto;
 }
 
-/* 👇 This wraps the hamburger and title together */
 .menu-left {
   display: flex;
   align-items: center;
@@ -84,7 +82,6 @@ body {
   cursor: pointer;
 }
 
-/* ==== MAIN CONTENT ==== */
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -129,7 +126,6 @@ body {
   margin: 10px 0;
 }
 
-/* ==== MEDIA QUERIES ==== */
 @media (max-width: 1000px) {
   .main-grid {
     grid-template-columns: 1fr 1fr;
