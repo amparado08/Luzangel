@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   color: white;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -109,17 +109,24 @@ body {
 }
 
 .text-box {
+  display: inline-block;
   text-align: left;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
+  background: rgba(128, 128, 128, 0.6);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
-.text-box p,
-.text-box h2 {
+.text-box h2,
+.text-box p {
   font-family: 'Inknut Antiqua', serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.3;
   text-shadow: 1px 1px 2px #000;
+  color: white;
 }
 
 .text-box p {
@@ -128,6 +135,28 @@ body {
 
 .text-box h2 {
   margin: 10px 0;
+}
+
+.projects p {
+  margin: 5px 0;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 17px;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tech-stack img {
+  max-width: 45px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 1;
 }
 
 @media (max-width: 1000px) {
@@ -155,7 +184,7 @@ body {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) and (min-width: 601px) {
   .main-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -182,6 +211,16 @@ body {
 
   .menu-bar h1 {
     font-size: 17px;
+  }
+
+  .tech-stack {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  .tech-stack img {
+    max-width: 40px;
   }
 }
 
@@ -237,6 +276,15 @@ body {
   .text-box {
     text-align: center;
   }
+
+  .tech-stack {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tech-stack img {
+    max-width: 35px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -261,7 +309,12 @@ body {
     font-size: 16px;
   }
 
-  .text-box p {
+  .projects p {
     font-size: 14px;
+  }
+
+  .tech-stack img {
+    width: 35px;
+    height: auto;
   }
 }
