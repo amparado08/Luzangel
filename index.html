@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,11 +11,8 @@
   <header class="header-grid">
     <div class="container">
       <div class="menu-bar">
-        <div class="menu-left">
-          <button class="hamburger" id="hamburger">&#9776;</button>
-          <h1>MY PORTFOLIO</h1>
-        </div>
-
+        <h1 class="logo">MY PORTFOLIO</h1>
+        <button class="hamburger" id="hamburger">&#9776;</button>
         <nav id="nav-menu">
           <a href="index.html" id="active-btn">HOME</a>
           <a href="about.html">ABOUT</a>
@@ -38,6 +36,7 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
